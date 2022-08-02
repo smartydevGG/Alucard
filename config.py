@@ -12,8 +12,8 @@ def is_enabled(value, default):
 
 
 # Creator
-CREATOR_NAME = os.environ.get("CREATOR_NAME", "𝙼𝚄𝙷𝙰𝙼𝙼𝙴𝙳")
-CREATOR_USERNAME = os.environ.get("CREATOR_USERNAME", "PR0FESS0_99")
+CREATOR_NAME = os.environ.get("CREATOR_NAME", "Smxrty")
+CREATOR_USERNAME = os.environ.get("CREATOR_USERNAME", "Madhav_Smxrty")
 
 # Account
 API_HASH = os.environ.get("API_HASH", "5b1d0992294a67cb54512a4fafeb0c88")
@@ -26,7 +26,7 @@ DATABASE_NAME = os.environ.get("DATABASE_NAME", "LuciferMoringstar-Robot")
 DATABASE_URI = os.environ.get("DATABASE_URI", "mongodb+srv://{Username}:{Passs}@cluster0.{clusterID}.mongodb.net/myFirstDatabase?retryWrites=true{iD}=majority")
 # Chats & Users
 ADMINS = os.environ.get("ADMINS", "2028425293 1637186875")
-SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "Mo_Tech_Group")
+SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "alucardbotupdates")
 AUTH_CHANNEL = os.environ.get("AUTH_CHANNEL", "-1001685151224")
 CHANNELS = [int(ch) if search.search(ch) else ch for ch in os.environ.get("CHANNELS", "-1001784382279").split()]
 LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1001590063851")
