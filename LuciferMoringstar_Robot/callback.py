@@ -232,7 +232,7 @@ async def cb_handler(bot, update):
 
             FILE_CAPTION = settings["caption"]
             caption = FILE_CAPTION.format(mention=update.from_user.mention, file_name=title, size=size, caption=files.caption)
-            buttons = [[ InlineKeyboardButton("⚜️ 𝚂𝙷𝙰𝚁𝙴 𝙼𝙴 𝚆𝙸𝚃𝙷 𝚈𝙾𝚄𝚁 𝙵𝚁𝙸𝙴𝙽𝙳𝚂 ⚜️", url=f"https://t.me/share/url?url=Best%20AutoFilter%20Bot%20%0A%40LuciferMoringstar_Robot%0A@{temp.Bot_Username}") ]]
+            buttons = [[ InlineKeyboardButton("Share me with your friends🍷", url=f"https://t.me/share/url?url=Best%20AutoFilter%20Bot%20%0A%40LuciferMoringstar_Robot%0A@{temp.Bot_Username}") ]]
             if settings["savefiles"]:
                 protect_content = True
             else:
@@ -240,6 +240,7 @@ async def cb_handler(bot, update):
 
             try:
                 if settings["filemode"]:
+                    
                     try:
                         await bot.send_cached_media(chat_id=update.from_user.id, file_id=file_id, caption=caption, reply_markup=InlineKeyboardMarkup(buttons), protect_content=protect_content)
                         await update.answer("""𝙲𝙷𝙴𝙲𝙺 𝙿𝙼, 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴𝚂 𝙸𝙽 𝙿𝙼\n𝙲𝙻𝙸𝙲𝙺 𝙲𝙷𝙴𝙲𝙺 𝙿𝙼 𝙱𝚄𝚃𝚃𝙾𝙽""", show_alert=True)   
@@ -304,9 +305,9 @@ async def cb_handler(bot, update):
                 return
               
         elif update.data == "start":
-            buttons = [[ InlineKeyboardButton("× 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ×", url=f"http://t.me/{temp.Bot_Username}?startgroup=true") ],
-                      [ InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃 💬", url=f"t.me/{SUPPORT}"), InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="t.me/Mo_Tech_YT") ],
-                      [ InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿", callback_data="help"), InlineKeyboardButton("𝙰𝙱𝙾𝚄𝚃 🤠", callback_data="about") ]] 
+            buttons = [[ InlineKeyboardButton("Add me to your group", url=f"http://t.me/{temp.Bot_Username}?startgroup=true") ],
+                      [ InlineKeyboardButton("Updates Channel", url="t.me/alucardbotupdates") ],
+                      [ InlineKeyboardButton("Help", callback_data="help"), InlineKeyboardButton("About me", callback_data="about") ]] 
             await update.message.edit(START_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(buttons))
 
         elif update.data == "help":
