@@ -8,6 +8,5 @@ else
 fi
 cd /LuciferMoringstar-Robot
 pip3 install -U -r requirements.txt
-echo "Starting LuciferMoringstar-Robot...."
+echo "Starting LuciferMoringstar RoBot...."
 python3 main.py
-https://github.com/smartydevGG/Alucard
